@@ -4,11 +4,13 @@ const app = express();
 const indexRoutes = require("./src/routes/index");
 const loginRoutes = require("./src/routes/login");
 const productsRoutes = require("./src/routes/products");
+const cartRoutes = require("./src/routes/cart");
 
 // Routes
 app.use("/", indexRoutes);
 app.use("/login", loginRoutes);
 app.use("/products", productsRoutes);
+app.use("/cart", cartRoutes);
 
 
 // view engine setup
