@@ -15,22 +15,7 @@
     
     <div class="header">
         <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <a href="/"><img src="img/logo.png" alt="logo" width="125px"></a>
-                </div>
-                <nav>
-                    <ul id="MenuItems">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="login">Account</a></li>
-                    </ul>
-                </nav>
-                <a href="cart.html"><img src="img/cart.png" width="30px" height="30px"></a>
-                <img src="img/menu.png" class="menu-icon" onclick="menutoggle()">
-            </div>
+            <%- include("navbar.ejs") %>
             <div class="row">
                 <div class="col-2">
                     <h1>Give Your Workout <br> A New Style!</h1>
