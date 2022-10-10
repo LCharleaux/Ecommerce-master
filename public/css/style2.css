@@ -1,0 +1,126 @@
+/*formulário de produto*/
+body {
+    background: #efefef;
+  }
+  
+  .form-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  #list-example {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #list-example i {
+    margin-right: 5px;
+  }
+  
+  .table-input {
+    border: none;
+    text-align: center;
+    width: 140px;
+    background-color: transparent;
+  }
+  
+  #experience-table th,
+  #education-table th {
+    border-top: none !important;
+  }
+  
+  .form input,
+  .form select {
+    height: 50px !important;
+  }
+  
+  .form select option:hover,
+  .pen-update-row {
+    color: white !important;
+    background-color: #7c6576 !important;
+  }
+  
+  .form-title {
+    color: #7c6576;
+  }
+  
+  .activeControl,
+  .activeControl:hover,
+  .activeControl:focus,
+  .form-button,
+  .activeControl:hover,
+  .form-button:hover,
+  .form-button:focus {
+    background-color: #7c6576 !important;
+    border: #7c6576 !important;
+    color: white !important;
+  }
+  
+  .form-nav-controls {
+    outline: none !important;
+    cursor: pointer;
+  }
+  
+  *:focus {
+    border-color: #7c6576 !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  
+  .form-icon {
+    background: #7c6576;
+    color: white;
+    border-radius: 1000px;
+    width: 41px;
+    height: 40px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #education-table thead th,
+  #experience-table thead th {
+    font-weight: 100;
+  }
+  
+  .hideForm {
+    opacity: 0;
+    pointer-events: none;
+    animation-name: hide;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    display: none;
+  }
+  
+  .showForm {
+    animation-name: show;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .trash-delete-row {
+    background-color: transparent;
+    color: red;
+  }
+  
+  @keyframes hide {
+    from {
+      transform: translate(0px);
+      display: block;
+    }
+    to {
+      transform: translate(0px, -20px);
+      display: none;
+    }
+  }
+  
+  @keyframes show {
+    from {
+      transform: translate(0px, -20px);
+      display: none;
+    }
+    to {
+      transform: translate(0px);
+      display: block;
+    }
+  }

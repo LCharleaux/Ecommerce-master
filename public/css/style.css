@@ -61,7 +61,7 @@ p{
 }
 .btn{
     display: inline-block;
-    background: #ff523b;
+    background: #f81a1a;
     color: white;
     padding: 8px 30px;
     margin: 30px 0;
@@ -72,7 +72,7 @@ p{
     background: #563434;
 }
 .header{
-    background: radial-gradient(#fff,#ffd6d6);
+    background: radial-gradient(#fff,#21a7f9);
 }
 .header .row{
     margin-top: 70px;
@@ -113,7 +113,7 @@ p{
 }
 .title::after{
     content: '';
-    background: #ff523b;
+    background: #5f3bff;
     width: 80px;
     height: 5px;
     border-radius: 5px;
@@ -130,14 +130,14 @@ h4{
     font-size: 14px;
 }
 .rating .fa{
-    color: #ff523b;
+    color: #413bff;
 }
 .col-4:hover{
     transform: translateY(-5px);
 }
 /* Offer */
 .offer{
-    background: radial-gradient(#fff, #ffd6d6);
+    background: radial-gradient(#fff,#21a7f9);
     margin-top: 80px;
     padding: 30px 0;
 }
@@ -383,7 +383,7 @@ th:last-child{
 /* Account page */
 .account-page{
     padding: 50px 0;
-    background: radial-gradient(#fff, #ffd6d6);
+    background: radial-gradient(#fff,#21a7f9);
 }
 .form-container{
     background: #fff;
@@ -499,3 +499,8 @@ form a{
         display: none;
     }
 }
+
+
+
+
+  
