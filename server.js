@@ -1,12 +1,15 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const indexRoutes = require("./src/routes/index");
 const loginRoutes = require("./src/routes/login");
 const productsRoutes = require("./src/routes/products");
 const cartRoutes = require("./src/routes/cart");
 const product_detailsRoutes = require("./src/routes/product_details");
 const new_productRoutes = require("./src/routes/new_product");
+
 
 // Routes
 app.use("/", indexRoutes);
@@ -15,6 +18,11 @@ app.use("/products", productsRoutes);
 app.use("/cart", cartRoutes);
 app.use("/product_details", product_detailsRoutes);
 app.use("/new_product", new_productRoutes);
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
+app.use (cookieParser());
 
 // view engine setup
 app.set('views', './src/views');
