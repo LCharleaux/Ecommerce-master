@@ -2,12 +2,19 @@ async function showLoginPage(req, res) {
     res.render('login', { title: 'Login' });
 }
 
-async function showHomePage(req, res) {
-    var username = req.body;
 
-    console.log("ENTROUUU");
-    console.log(username);
-}
+
+async function showHomePage(req, res) {
+    console.log("ENTROUUUU");
+    console.log(req.body);
+  }
+
+
+
+
+
+
+
 
 module.exports = {showLoginPage, showHomePage};
 
