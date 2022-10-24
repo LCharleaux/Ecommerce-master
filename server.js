@@ -31,3 +31,15 @@ app.use(express.static(path.join(__dirname, "public")));
 app.listen(3000, () =>
   console.log(`Application is running on http://localhost:3000`)
 );
+
+
+const connect = async () => {
+  try {
+    await db.authenticate();
+    console.log("Connection has been established successfully.");
+  } catch (error) {
+    console.error("Unable to connect to the database:", error);
+  }
+};
+
+connect();
