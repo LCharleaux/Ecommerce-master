@@ -3,10 +3,9 @@ async function showLoginPage(req, res) {
 }
 
 async function showHomePage(req, res) {
-    var username = req.body;
 
     console.log("ENTROUUU");
-    console.log(username);
+    console.log(req.body);
 }
 
 module.exports = {showLoginPage, showHomePage};
