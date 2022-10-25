@@ -6,6 +6,7 @@ async function showHomePage(req, res) {
 
     console.log("ENTROUUU");
     console.log(req.body);
+    res.render('index', { title: 'Home' });
 }
 
 module.exports = {showLoginPage, showHomePage};

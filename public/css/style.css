@@ -8,6 +8,10 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+h1{
+    text-align: center;
+    color: #555;
+}
 .navbar
 {
     display: flex;
@@ -450,11 +454,6 @@ form a{
 }
 
 /*login page*/
-.login-page {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
-  }
 
   .formLogin {
     position: relative;
@@ -466,7 +465,7 @@ form a{
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
-  .formLogin input {
+  .formLogin input, textarea, #imageProd {
     font-family: "Roboto", sans-serif;
     outline: 0;
     background: #f2f2f2;
@@ -490,6 +489,7 @@ form a{
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
+    border-radius: 25px;
   }
   .formLogin button:hover,.formLogin button:active,.formLogin button:focus {
     background: #e14935;
@@ -507,39 +507,17 @@ form a{
     display: none;
   }
 
-  .containerLogin {
-    position: relative;
-    z-index: 1;
-    max-width: 300px;
-    margin: 0 auto;
+  #imageProd {
+    padding: 5;
   }
-  .containerLogin:before, .containerLogin:after {
-    content: "";
-    display: block;
-    clear: both;
+
+  #categorieProd{
+    margin: 10 0;
+    float: left;
+    padding: 5 34;
+    border-color: #e14935;
   }
-  .containerLogin .info {
-    margin: 50px auto;
-    text-align: center;
-  }
-  .containerLogin .info h1 {
-    margin: 0 0 15px;
-    padding: 0;
-    font-size: 36px;
-    font-weight: 300;
-    color: #1a1a1a;
-  }
-  .containerLogin .info span {
-    color: #4d4d4d;
-    font-size: 12px;
-  }
-  .containerLogin .info span a {
-    color: #000000;
-    text-decoration: none;
-  }
-  .containerLogin .info span .fa {
-    color: #EF3B3A;
-  }
+
 
 /* Media query for menu */
 @media only screen and (max-width: 800px){
