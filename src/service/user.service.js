@@ -7,8 +7,8 @@ async function getUser(req, res) {
 
     return await userModel.findOne({
         where: {
-            email: email,
-            password: password
+            e_mail: email,
+            senha: password
         }
     });
 

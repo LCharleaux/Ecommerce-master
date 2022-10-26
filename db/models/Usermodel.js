@@ -1,7 +1,7 @@
 const DataTypes = require('sequelize');
 const sequelize = require('../../db.js');
 
-const User = sequelize.define('usuario',  {
+const User = sequelize.define('usuarios',  {
     id: {
       allowNull: false,
       autoIncrement: true,
