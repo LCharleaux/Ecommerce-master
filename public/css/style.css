@@ -459,7 +459,7 @@ form a{
     position: relative;
     z-index: 1;
     background: #FFFFFF;
-    max-width: 360px;
+    max-width: 550px;
     margin: 0 auto 100px;
     padding: 45px;
     text-align: center;
@@ -514,7 +514,7 @@ form a{
   #categorieProd{
     margin: 10 0;
     float: left;
-    padding: 5 34;
+    padding: 5 60;
     border-color: #e14935;
   }
 
