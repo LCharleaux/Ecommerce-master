@@ -16,20 +16,20 @@
 
   <h1>Adcionar novo Produto</h1>
   <div class="formLogin">
-    <form action="#" class="productForm">
+    <form action="#" class="productForm" method="post">
       <input type="text" name="prodName" placeholder="Nome do Produto"/>
-      <select name="categories" id="categorieProd">
+      <select name="categorie" id="categorieProd">
         <option value="" disabled selected>Escolha a categoria do Game</option>
-        <option value="1">Playstation 4</option>
-        <option value="2">Xbox One</option>
-        <option value="3">Nintendo Switch</option>
-        <option value="4">Playstation 5</option>
-        <option value="5">Xbox Series</option>
+        <option value="PS4">Playstation 4</option>
+        <option value="Xbox One">Xbox One</option>
+        <option value="Nintendo Switch">Nintendo Switch</option>
+        <option value="PS5">Playstation 5</option>
+        <option value="Xbox Series X">Xbox Series X</option>
       </select>
-      <input type="text" name="priceProd" placeholder="Preço"/>
+      <input type="text" name="price" placeholder="Preço"/>
       <textarea name="description" id="" cols="34" rows="10" placeholder="Descrição"></textarea>
       <input type="file" name="Image" accept="image/png, image/gif, image/jpeg" id="imageProd" placeholder="Adicionar Imagem"/>
-      <button>Enviar</button>
+      <button type="submit">Enviar</button>
       
     </form>
   </div>
