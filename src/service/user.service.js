@@ -14,4 +14,17 @@ async function getUser(req, res) {
 
 }
 
-module.exports = { getUser };
+async function createUser(req, res) {
+    const { newusername, newemail, newphone, newpassword, newaddress } = req.body;
+
+    return await userModel.create({
+        nome: newusername,
+        e_mail: newemail,
+        telefone: newphone,
+        senha: newpassword,
+        endereco: newaddress,
+        admin: false
+    });
+}
+
+module.exports = { getUser, createUser };

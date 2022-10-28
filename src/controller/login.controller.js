@@ -23,4 +23,23 @@ async function showHomePage(req, res) {
     }
 }
 
-module.exports = {showLoginPage, showHomePage};
+async function registerUser(req, res) {
+    console.log("ENTROUUU");
+    console.log(req.body);
+    try{
+    const user = await userServices.createUser(req, res);
+    console.log(user);
+    if(user) {
+        console.log("Usuario criado");
+        res.render('index', { title: 'Home' });
+    }else{
+        console.log("Usuario não criado");
+        res.render('login', { title: 'Login' });
+    }
+    }catch(err){
+    console.log(err);
+    }
+}
+
+
+module.exports = {showLoginPage, showHomePage, registerUser};
