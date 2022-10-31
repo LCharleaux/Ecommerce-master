@@ -31,7 +31,12 @@ const Product = sequelize.define('produtos',  {
     updatedAt: {
       allowNull: false,
       type: DataTypes.DATE
+    },
+    caminho_imagem: {
+        type: DataTypes.STRING(100),
+        allowNull: false
     }
+    
 
     }
 );
