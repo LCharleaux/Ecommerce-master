@@ -6,7 +6,9 @@ async function showNewProductPage(req, res) {
 }
 
 async function addProduct(req, res) {
+
     console.log("ENTROUUU");
+    console.log(req.file.filename);
     try{
     const product = await newProductServices.addNewProduct(req, res);
     console.log(product);
