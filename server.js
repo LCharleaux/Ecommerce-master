@@ -9,6 +9,7 @@ const productsRoutes = require("./src/routes/products");
 const cartRoutes = require("./src/routes/cart");
 const product_detailsRoutes = require("./src/routes/product_details");
 const new_productRoutes = require("./src/routes/new_product");
+const myproductsRoutes = require("./src/routes/myproducts");
 const db = require("./db");
 
 
@@ -23,6 +24,7 @@ app.use("/products", productsRoutes);
 app.use("/cart", cartRoutes);
 app.use("/product_details", product_detailsRoutes);
 app.use("/new_product", new_productRoutes);
+app.use("/myproducts", myproductsRoutes);
 
 
 // view engine setup
