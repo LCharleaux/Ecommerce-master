@@ -1,5 +1,6 @@
 const newProductServices = require('../service/newProduct.service.js');
 
+
 async function showNewProductPage(req, res) {
     res.render('new_product', { title: 'New Product' });
 }

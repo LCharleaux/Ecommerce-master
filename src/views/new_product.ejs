@@ -16,7 +16,7 @@
 
   <h1>Adcionar novo Produto</h1>
   <div class="formLogin">
-    <form action="#" class="productForm" method="post">
+    <form action="#" class="productForm" method="post" enctype="multipart/form-data">
       <input type="text" name="prodName" placeholder="Nome do Produto"/>
       <select name="categorie" id="categorieProd">
         <option value="" disabled selected>Escolha a categoria do Game</option>
@@ -28,7 +28,7 @@
       </select>
       <input type="text" name="price" placeholder="Preço"/>
       <textarea name="description" id="" cols="34" rows="10" placeholder="Descrição"></textarea>
-      <input type="file" name="Image" accept="image/png, image/gif, image/jpeg" id="imageProd" placeholder="Adicionar Imagem"/>
+      <input type="file" name="image" accept="image/png, image/gif, image/jpeg" id="imageProd" placeholder="Adicionar Imagem"/>
       <button type="submit">Enviar</button>
       
     </form>
