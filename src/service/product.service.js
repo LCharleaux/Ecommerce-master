@@ -15,4 +15,19 @@ async function addNewProduct(req, res) {
     });
 }
 
-module.exports = {addNewProduct};
+
+async function getProducts(req, res) {
+    console.log("ENTROU NO GET PRODUCTS");
+    return await ProductModel.findAll();
+}
+
+async function getProductById(productId) {
+    return await ProductModel.findOne({
+        where: {
+            id: productId
+        }
+    });
+}
+
+
+module.exports = {addNewProduct, getProducts, getProductById};

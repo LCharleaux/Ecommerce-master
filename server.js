@@ -3,13 +3,10 @@ const path = require("path");
 const app = express();
 const cookieParser = require("cookie-parser");  
 const bodyParser = require("body-parser");
-const indexRoutes = require("./src/routes/index");
-const loginRoutes = require("./src/routes/login");
-const productsRoutes = require("./src/routes/products");
-const cartRoutes = require("./src/routes/cart");
-const product_detailsRoutes = require("./src/routes/product_details");
-const new_productRoutes = require("./src/routes/new_product");
-const myproductsRoutes = require("./src/routes/myproducts");
+const indexRoutes = require("./src/routes/index.routes");
+const loginRoutes = require("./src/routes/login.routes");
+const productRoutes = require("./src/routes/products.routes");
+const cartRoutes = require("./src/routes/cart.routes");
 const db = require("./db");
 
 
@@ -20,11 +17,8 @@ app.use(cookieParser());
 app.use(bodyParser.json({type: 'application/json'}));
 app.use("/", loginRoutes);
 app.use("/index", indexRoutes);
-app.use("/products", productsRoutes);
+app.use("/product", productRoutes);
 app.use("/cart", cartRoutes);
-app.use("/product_details", product_detailsRoutes);
-app.use("/new_product", new_productRoutes);
-app.use("/myproducts", myproductsRoutes);
 
 
 // view engine setup
