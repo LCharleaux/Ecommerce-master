@@ -1,7 +1,11 @@
 const productService = require('../service/product.service');
 
 async function showProductsPage(req, res) {
-    res.render('products', { title: 'Products' });
+    console.log("ENTROU NO SHOW PRODUCTS PAGE");
+    const products = await productService.getProducts(req, res);
+    console.log("PASSOU AQQQQQQ");
+    res.render('products', {products: products});
+    console.log("SAIU DO SHOW PRODUCTS PAGE");
 }
 
 async function showNewProductPage(req, res) {

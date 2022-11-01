@@ -29,15 +29,17 @@
                 <option>Sort By Sale</option>
             </select>
         </div>
-        <% products.forEach(function(product) { %>
         <div class="row">
+        <% products.forEach(function(product) { %>
+        
             <div class="col-4">
                 <a href="/product/product-details?productId=<%=product.id%>"><img src="/img/product_images/<%= product.caminho_imagem%>"></a>
                 <h4><%= product.nome %></h4>
                 <p><%= product.preco %></p>
             </div>
-        </div>
+        
         <% }); %>
+    </div>
         <div class="page-btn">
             <span>1</span>
             <span>2</span>
