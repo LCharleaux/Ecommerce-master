@@ -22,7 +22,7 @@
         <div class="row row-2">
             <h2>Meus Produtos</h2>
             <select>
-                <option>Default Sort</option>
+                <option>Ordem Padrão</option>
                 <option>Sort By Price</option>
                 <option>Sort By Popularity</option>
                 <option>Sort By Rating</option>
@@ -35,7 +35,8 @@
             <div class="col-4">
                 <a href="/product/product-details?productId=<%=product.id%>"><img src="/img/product_images/<%= product.caminho_imagem%>"></a>
                 <h4><%= product.nome %></h4>
-                <p><%= product.preco %></p>
+                <p>R$<%= product.preco %></p>
+                <a href="/product/delete?productId=<%=product.id%>" class="btn">Apagar</a>
             </div>
         
         <% }); %>

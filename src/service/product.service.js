@@ -21,6 +21,7 @@ async function getProducts(req, res) {
     return await ProductModel.findAll();
 }
 
+
 async function getProductById(productId) {
     return await ProductModel.findOne({
         where: {
@@ -29,5 +30,16 @@ async function getProductById(productId) {
     });
 }
 
+async function deleteProduct(productId) {
+    console.log("ENTROU NO DELETE PRODUCT");
+    return await ProductModel.destroy({
+        where: {
+            id: productId
+        }
+        
+    });
+    
+}
 
-module.exports = {addNewProduct, getProducts, getProductById};
+
+module.exports = {addNewProduct, getProducts, getProductById, deleteProduct};

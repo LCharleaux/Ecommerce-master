@@ -32,6 +32,23 @@ async function createProduct(req, res) {
 
 }
 
+async function deleteProduct(req, res) {
+    console.log("ENTROU NO DELETE PRODUCT");
+    const productId = req.query.productId;
+    console.log(productId);
+    const product = await productService.deleteProduct(productId);
+    console.log("PASSOU AQQQQQQ");
+    if(product) {
+        console.log("Produto deletado");
+        res.redirect('/product/my-products');
+    }else{
+        console.log("Produto não deletado");
+        res.redirect('/product/my-products');
+    }
+    console.log("SAIU DO DELETE PRODUCT");
+}
+
+
 async function showMyProductsPage(req, res) {
     console.log("ENTROU NO SHOW MY PRODUCTS PAGE");
     const products = await productService.getProducts(req, res);
@@ -47,4 +64,4 @@ async function showProductDetailsPage(req, res) {
     res.render('product_details', {product: product});
 }
 
-module.exports = {showProductsPage, showNewProductPage, createProduct, showMyProductsPage, showProductDetailsPage};
+module.exports = {showProductsPage, showNewProductPage, createProduct, showMyProductsPage, showProductDetailsPage, deleteProduct};
