@@ -39,5 +39,24 @@ async function deleteProduct(productId) {
     
 }
 
+async function updateProduct(productId, req, res) {
+    const { prodName, price, description, categorie } = req.body;
+    const image = req.file.filename;
+    console.log("ENTROU NO UPDATE PRODUCT");
+    return await ProductModel.update({
+        nome: prodName,
+        preco: price.replace(",", "."),
+        descricao: description,
+        categoria: categorie,
+        caminho_imagem: image
+    }, {
+        where: {
+            id: productId
+        }
+    });
+    
+}
 
-module.exports = {addNewProduct, getProducts, getProductById, deleteProduct};
+
+
+module.exports = {addNewProduct, getProducts, getProductById, deleteProduct, updateProduct};

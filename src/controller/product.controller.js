@@ -64,4 +64,32 @@ async function showProductDetailsPage(req, res) {
     res.render('product_details', {product: product});
 }
 
-module.exports = {showProductsPage, showNewProductPage, createProduct, showMyProductsPage, showProductDetailsPage, deleteProduct};
+async function showEditProductPage(req, res) {
+    console.log("ENTROU NO SHOW EDIT PRODUCT PAGE");
+    const { productId } = req.query;
+    console.log(productId);
+    const product = await productService.getProductById(productId);
+    res.render('edit_product', {product: product});
+    console.log("SAIU DO SHOW EDIT PRODUCT PAGE");
+}
+
+async function editProduct(req, res) {
+    console.log("ENTROU NO EDIT PRODUCT");
+    const { productId } = req.query;
+    const product = await productService.updateProduct(productId, req, res);
+    console.log("PASSOU AQQQQQQ");
+    if(product) {
+        console.log("Produto editado");
+        res.redirect('/product/my-products');
+    }else{
+        console.log("Produto não editado");
+        res.redirect('/product/my-products');
+    }
+    console.log("SAIU DO EDIT PRODUCT");
+}
+
+
+
+
+
+module.exports = {showProductsPage, showNewProductPage, createProduct, showMyProductsPage, showProductDetailsPage, deleteProduct, showEditProductPage, editProduct};
