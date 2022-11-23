@@ -27,6 +27,7 @@ async function createUser(req, res) {
     });
 }
 
+
 module.exports = { getUser, createUser };
 
 
