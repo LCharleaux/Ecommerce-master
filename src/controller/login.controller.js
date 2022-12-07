@@ -13,6 +13,7 @@ async function showHomePage(req, res) {
     console.log(user);
     if(user) {  
         console.log("Usuario encontrado");
+        
         res.render('index', { title: 'Home' });
     }else{
         console.log("Usuario não encontrado");

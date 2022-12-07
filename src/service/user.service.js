@@ -3,8 +3,7 @@ const userModel = require('../../db/models/UserModel.js');
 
 
 async function getUser(req, res) {
-    const { email, password } = req.body;
-
+    const {id ,email, password,} = req.body;
     return await userModel.findOne({
         where: {
             e_mail: email,
@@ -26,6 +25,8 @@ async function createUser(req, res) {
         admin: false
     });
 }
+
+
 
 module.exports = { getUser, createUser };
 
