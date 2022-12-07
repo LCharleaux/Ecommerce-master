@@ -27,20 +27,27 @@
                         <div class="small-img-col">
                             <img src="/img/product_images/<%= product.caminho_imagem%>" width="100%" class="small-img">
                         </div>
-                        
+
                     </div>
 
                 </div>
                 <div class="col-2">
-                    <p>Home / <%= product.categoria %></p>
-                    <h1><%= product.nome%></h1>
-                    <h4>R$<%= product.preco%></h4>
+                    <p>Home / <%= product.categoria %>
+                    </p>
+                    <h1>
+                        <%= product.nome%>
+                    </h1>
+                    <h4>R$<%= product.preco%>
+                    </h4>
 
-                    <a href="" class="btn">Adicionar ao Carrinho</a>
-
+                    <form action="" method="post">
+                        <a href="/cart/add" class="btn">Adicionar ao Carrinho</a>
+                    </form>
                     <h3>Detalhes <i class="fa fa-indent"></i></h3>
                     <br>
-                    <p><%= product.descricao%></p>
+                    <p>
+                        <%= product.descricao%>
+                    </p>
                 </div>
             </div>
         </div>
