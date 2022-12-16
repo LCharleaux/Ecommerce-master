@@ -29,6 +29,14 @@ async function getProductById(productId) {
     });
 }
 
+async function getProductById2(productId) {
+    return await ProductModel.findOne({
+        where: {
+            id: productId
+        }
+    });
+}
+
 async function deleteProduct(productId) {
     return await ProductModel.destroy({
         where: {

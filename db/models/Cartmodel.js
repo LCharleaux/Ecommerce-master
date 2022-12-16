@@ -1,20 +1,32 @@
-let cart = [];
+const DataTypes = require('sequelize');
+const sequelize = require('../../db.js');
 
-module.exports = class Cart {
-    static save(product) {
-        if(cart[product.id]) {
-            cart[product.id].qty++;
-        }else{
-            cart[product.id] = {productData: product, qty: 1};
-        }
+const Cart = sequelize.define('carrinhos',  {
+    id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataTypes.INTEGER
+    },
+    id_produto: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    createdAt: {
+        allowNull: false,
+        type: DataTypes.DATE
+    },
+    updatedAt: {
+        allowNull: false,
+        type: DataTypes.DATE
     }
-}
+});
 
 async function getCart(req, res) {
-    if(!req.session.cart) {
-        req.session.cart = new Cart();
-    }
-    return req.session.cart;
+    const cart = await Cart.findAll();
+    return cart;
 }
 
-module.exports = {getCart};
+module.exports = {Cart, getCart};
+
+

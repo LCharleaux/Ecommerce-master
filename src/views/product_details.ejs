@@ -40,74 +40,15 @@
                     <h4>R$<%= product.preco%>
                     </h4>
 
-                    <form action="" method="post">
-                        <a href="/cart/add" class="btn">Adicionar ao Carrinho</a>
+                    <form action="/cart/add" method="post">
+                        <input type="text" hidden value="<%= product.id%>" name="productId"> 
+                        <button class="btn">Adicionar ao Carrinho</button> 
                     </form>
                     <h3>Detalhes <i class="fa fa-indent"></i></h3>
                     <br>
                     <p>
                         <%= product.descricao%>
                     </p>
-                </div>
-            </div>
-        </div>
-        <!-- title -->
-        <div class="small-container">
-            <div class="row row-2">
-                <h2>Related Products</h2>
-                <p>View More</p>
-            </div>
-        </div>
-        <!-- Products -->
-        <div class="small-container">
-            <div class="row">
-                <div class="col-4">
-                    <img src="/img/product-9.jpg">
-                    <h4>Red Printed T-Shirt</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>$50.00</p>
-                </div>
-                <div class="col-4">
-                    <img src="/img/product-10.jpg">
-                    <h4>Red Printed T-Shirt</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>$50.00</p>
-                </div>
-                <div class="col-4">
-                    <img src="/img/product-11.jpg">
-                    <h4>Red Printed T-Shirt</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>$50.00</p>
-                </div>
-                <div class="col-4">
-                    <img src="/img/product-12.jpg">
-                    <h4>Red Printed T-Shirt</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>$50.00</p>
                 </div>
             </div>
         </div>
