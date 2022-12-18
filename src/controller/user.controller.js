@@ -6,4 +6,16 @@ async function showUserPage(req, res) {
   res.render('user', { user });
 }
 
+
+async function getUser(req, res) {
+  const { id } = req.params;
+
+  return await User.findOne({
+    where: {
+      id,
+    },
+  });
+
+}
+
 module.exports = {showUserPage};

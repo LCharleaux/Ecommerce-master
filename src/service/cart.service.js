@@ -16,11 +16,12 @@ async function addToCart(req, res) {
 
 
 async function showCartPage(req, res) {
-
-    const cart = await cartModel.getCart(req, res);
-    console.log(cart);
+    const cart = cartModel.getCart(req, res);
     res.render('cart', { title: 'Cart', cart: cart });
+
 }
+
+
 
 
 

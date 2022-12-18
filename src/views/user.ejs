@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products | RedStore</title>
+    <title>Dados | Market Games</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -14,15 +14,43 @@
 <body>
     <%- include("navbar.ejs") %>
 
-    <!--Informações do usuário logado-->
-    <div class="small-container">
-        <div class="row row-2">
+        <!--Informações do usuário logado-->
+        <div class="small-container">
             <h2>Informações do usuário</h2>
+            <div class="row row-2">
+                
+
+                <div class="col-2">
+                    <h3>Nome</h3>
+                    <p>
+                        <%= user.nome %>
+                    </p>
+
+                </div>
+                <div class="col-2">
+                    <h3>Email</h3>
+                    <p>
+                        <%= user.e_mail %>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <h3>Endereço</h3>
+                    <p>
+                        <%= user.endereco %>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <h3>Telefone</h3>
+                    <p>
+                        <%= user.telefone %>
+                    </p>
+                </div>
+
+
+            </div>
+
         </div>
-    </div>
-    
-
-    <!-- Footer -->
-    <%- include("footer.ejs") %>
-
+            <!-- Footer -->
+            <%- include("footer.ejs") %>
+        
 </body>

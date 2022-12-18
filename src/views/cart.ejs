@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products | RedStore</title>
+    <title>Carrinho | Market Games</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -21,8 +21,23 @@
         <table>
             <tr>
                 <th>Produto</th>
-                <th>Quantidade</th>
+                <th>Vendedor</th>
                 <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="/img/product_images/<%= product.caminho_imagem%>">
+                        <div>
+                            <p><%= product.nome%></p>
+                            <small>Preço: R$<%= product.preco%></small>
+                            <br>
+                            <a href="">Remover</a>
+                        </div>
+                    </div>
+                </td>
+                <td>Admin</td>
+                <td>R$<%= product.preco%></td>
             </tr>
             
         </table>
@@ -30,9 +45,10 @@
             <table>
                 <tr>
                     <td>Total</td>
-                    <td>R$150.00</td>
+                    <td>R$<%= product.preco%></td>
                 </tr>
             </table>
+                <a href="/index" class="btn" onclick="Finalizar()">Finalizar compra </a>
         </div>
     </div>
 
@@ -50,6 +66,16 @@
             }
             else {
                 MenuItems.style.maxHeight = "0px"
+            }
+        }
+
+        function Finalizar() {
+            if (window.confirm("Deseja finalizar a compra?")){
+                alert("Compra finalizada com sucesso!");
+                return true;
+            }else{
+                alert("Compra cancelada!");
+                return false;
             }
         }
     </script>

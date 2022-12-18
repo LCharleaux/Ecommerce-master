@@ -377,6 +377,16 @@ td img{
     width: 100%;
     max-width: 400px;
 }
+
+.total-price a{
+    background: #ff523b;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
 td:last-child{
     text-align: right;
 }
