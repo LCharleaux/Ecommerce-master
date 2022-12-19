@@ -3,6 +3,17 @@ const userModel = require('../../db/models/UserModel.js');
 
 
 async function getUser(req, res) {
+    const {email, password,} = req.body;
+    return await userModel.findOne({
+        where: {
+            e_mail: email,
+            senha: password
+        }
+    });
+
+}
+
+async function getUser2(req, res) {
     const {id ,email, password,} = req.body;
     return await userModel.findOne({
         where: {
@@ -45,6 +56,6 @@ async function updateUser(req, res) {
 
 
 
-module.exports = { getUser, createUser };
+module.exports = { getUser, createUser, updateUser, getUser2 };
 
 

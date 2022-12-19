@@ -16,6 +16,7 @@ async function createProduct(req, res) {
 
     console.log("ENTROUUU");
     console.log(req.file.filename);
+    console.log("Teste");
     try{
     const product = await productService.addNewProduct(req, res);
     console.log(product);

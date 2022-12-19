@@ -24,28 +24,13 @@
                 <th>Vendedor</th>
                 <th>Subtotal</th>
             </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="/img/product_images/<%= product.caminho_imagem%>">
-                        <div>
-                            <p><%= product.nome%></p>
-                            <small>Preço: R$<%= product.preco%></small>
-                            <br>
-                            <a href="">Remover</a>
-                        </div>
-                    </div>
-                </td>
-                <td>admin</td>
-                <td>R$<%= product.preco%></td>
-            </tr>
-            
+
         </table>
         <div class="total-price">
             <table>
                 <tr>
                     <td>Total</td>
-                    <td>R$<%= product.preco%></td>
+                    <td>R$</td>
                 </tr>
             </table>
                 <a href="/index" class="btn" onclick="Finalizar()">Finalizar compra </a>

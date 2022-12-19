@@ -8,6 +8,7 @@ const loginRoutes = require("./src/routes/login.routes");
 const productRoutes = require("./src/routes/products.routes");
 const cartRoutes = require("./src/routes/cart.routes");
 const userRoutes = require("./src/routes/user.routes");
+const emptyCart = require("./src/routes/empty.routes");
 const db = require("./db");
 
 
@@ -21,6 +22,7 @@ app.use("/index", indexRoutes);
 app.use("/product", productRoutes);
 app.use("/cart", cartRoutes);
 app.use("/user", userRoutes);
+app.use("/emptyCart", emptyCart);
 
 // view engine setup
 app.set('views', './src/views');
